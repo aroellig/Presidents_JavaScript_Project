@@ -12,6 +12,10 @@ users will be able to:
 -a readMe
 -a list of each president and their birthplace
 
+//wireframe
+link: https://wireframe.cc/pro/pp/7854cefc0468888
+link : https://wireframe.cc/pro/pp/22381e5f5468890
+
 //technologies, libraries and APIs
 - am still searching for an API with photos of each US president. If I cannot find one I will code it/
 - Webpack to transpile the code 
