@@ -1,0 +1,40 @@
+{
+  "name": "JavaScriptProject",
+  "version": "1.0.0",
+  "description": "//BackGround The purpose of this project is to show the birthplace of each US president. This will be accomplished by presenting the user with a page showing the photos of each US president. Users can then use their mouse in order to click on a US president in order to select that president. They will then be taken to a map of the United States where that particular presidents birthplace is highlighted and labeled on the map. They will then have the option to click a button which will return them to the page with photos of each US president so that they can repeat the process as many times as they wish until they are satisfied. The map will only highlight the birthplace of the president that they have clicked on and will not highlight the birthplaces of the previous presidents that the user has clicked on.",
+  "main": "index.js",
+    "browserslist": [
+      "defaults"
+    ],
+    "scripts": {
+      "watch": "webpack --watch --mode=development",
+      "build": "webpack --mode=production"
+    },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aroellig/Presidents_JavaScript_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aroellig/Presidents_JavaScript_Project/issues"
+  },
+  "homepage": "https://github.com/aroellig/Presidents_JavaScript_Project#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.17.2",
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.2.2",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.39.0",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  }
+
+}
+
