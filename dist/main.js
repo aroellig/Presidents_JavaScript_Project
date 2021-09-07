@@ -7,6 +7,7 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
@@ -15,7 +16,7 @@
   \**********************/
 /***/ (function() {
 
-eval("\n   \n\n//# sourceURL=webpack://JavaScriptProject/./src/index.js?");
+eval("\n   \n\n   const switcher = document.querySelector('.btn');\n   \n   switcher.addEventListener('click', function() {\n       document.body.classList.toggle('dark-theme')\n   \n       var className = document.body.className;\n       if(className == \"light-theme\") {\n           this.textContent = \"Dark\";\n       }\n       else {\n        this.textContent = \"Light\";\n       }\n   \n       console.log('current class name: ' + className);\n   \n   });\n\n//# sourceURL=webpack://JavaScriptProject/./src/index.js?");
 
 /***/ })
 
