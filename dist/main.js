@@ -16,7 +16,7 @@
   \**********************/
 /***/ (function() {
 
-eval("\n   \n\n   const switcher = document.querySelector('.btn');\n   \n   switcher.addEventListener('click', function() {\n       document.body.classList.toggle('dark-theme')\n   \n       var className = document.body.className;\n       if(className == \"light-theme\") {\n           this.textContent = \"Dark\";\n       }\n       else {\n        this.textContent = \"Light\";\n       }\n   \n       console.log('current class name: ' + className);\n   \n   });\n\n//# sourceURL=webpack://JavaScriptProject/./src/index.js?");
+eval("\n   \n\n   const switcher = document.querySelector('.btn');\n   \n   switcher.addEventListener('click', function() {\n       document.body.classList.toggle('dark-theme')\n   \n       var className = document.body.className;\n       if(className == \"light-theme\") {\n           this.textContent = \"Dark\";\n       }\n       else {\n        this.textContent = \"Light\";\n       }\n   \n       console.log('current class name: ' + className);\n   \n   });\n\nconst width = 900;\nconst height = 600;\n\n const svg = d3.select('body').append('svg').attr('width', width).attr('height', height);\n\n d3.json(\"https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73cb814ed470/raw/a476b9098ba0244718b496697c5b350460d32f99/us-states.json\")\n .then(data => {\n\n })\n\n d3.selectAll(\"p\").style(\"color\", \"blue\");\n\n//# sourceURL=webpack://JavaScriptProject/./src/index.js?");
 
 /***/ })
 

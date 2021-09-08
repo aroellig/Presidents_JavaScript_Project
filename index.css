@@ -2,23 +2,27 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    padding:  4px;
+    padding:  200px;
   }
   
 
   /* Create two equal columns that sits next to each other */
   .column {
     flex: 100%;
-    padding: 50px;
+    padding-left: 200px;
   }
   
  
 .column img {
-  margin-top: 50px;
+  margin-top: 200px;
   vertical-align: middle;
 }
 
-.column img .btn {
+
+.pin{
+  fill:#3c373d;
+}
+/* .column img .btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,3 +40,18 @@
 .column .btn:hover {
   background-color: black;
 }
+
+
+	
+
+.state {
+  stroke-width: 1;
+  stroke: #ffffff;
+}
+
+	
+
+.state:hover {
+  fill: red;
+  cursor: pointer;
+} */

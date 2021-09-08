@@ -1,230 +1,363 @@
-const presidents = {
-    const 01 = {
+const presidents = [
+     {
         Name: 'George Washington',
         PlaceofBirth: "Westmoreland Co, VA",
-        photo: "https://loc.gov/resource/cph.3a09915"
+        location: {
+            latitude: 38,
+            longitude: 76
+        }
     },
-     const 02 = {
+     {
         Name: "John Adams",
         PlaceofBirth: "Quincy, Massachussets",
-        photo: "https://loc.gov/resource/cph.3a53276/"
+        location: {
+            latitude: 42,
+            longitude: 71
+        }
     },
-     const 03 = {
+     {
         Name: "Thomas Jefferson",
         PlaceofBirth: "Albemarle Co, VA",
-        photo: "https://loc.gov/resource/ppmsca.15708/"
-    }
-    const 04 = {
+        location: {
+            latitude: 38,
+            longitude: 78
+        }
+    },
+    {
         Name: "James Madison",
         PlaceofBirth:"Port Conway, VA",
-        photo: "https://loc.gov/resource/ppmsca.19166/"
+        location: {
+            latitude: 38,
+            longitude: 77
+        }
     },
-    const 05 = {
+    {
         Name: "James Monro",
         PlaceofBirth:"Westmoreland Co, VA",
-        photo: "https://loc.gov/resource/cph.3c17118/"
+        location: {
+            latitude: 38,
+            longitude: 76
+        }
     },
-    const 06 = {
+     {
         Name: "John Quincy Adams",
         PlaceofBirth:"Quincy, Massachussets",
-        photo: "https://loc.gov/resource/cph.3c17119/"
+        location: {
+            latitude: 42,
+            longitude: 71
+        }
     },
-    const 07 = {
+     {
         Name: "Andrew Jackson",
         PlaceofBirth:"Washawx, South Carolina",
-        photo: "https://loc.gov/resource/cph.3c17120/"
+        location: {
+            latitude: 34,
+            longitude: 80
+        }
     },
-    const 08 = {
+     {
         Name: "Martin Van Buren",
         PlaceofBirth:"Kinderhook, New York",
-        photo: "https://loc.gov/resource/cph.3a53282/"
+        location: {
+            latitude: 42,
+            longitude: 73
+        }
     },
-    const 09 = {
+     {
         Name: "William Henry Harrison",
         PlaceofBirth:"Charles Cirty Co, VA",
-        photo: "https://loc.gov/resource/cph.3a53386/"
+        location: {
+            latitude: 37,
+            longitude: 77
+        }
     },
-    const 10 = {
+    {
         Name: "John Tyler",
         PlaceofBirth:"Charles Cirty Co, VA",
-        photo: "https://loc.gov/resource/cph.3a53283/"
+        location: {
+            latitude: 37,
+            longitude: 77
+        }
     },
-     const 11 = {
+     {
         Name: "James K. Polk",
         PlaceofBirth:"Mecklenburg Co., N.C.",
-        photo: "https://loc.gov/resource/cph.3a53285/"
+        location: {
+            latitude: 35,
+            longitude: 80
+        }
     },
-     const 12 = {
+      {
         Name: "Zachary Taylor",
         PlaceofBirth: "Orange County, VA",
-        photo: "https://loc.gov/resource/cph.3c10067/"
+        location: {
+            latitude: 38,
+            longitude: 78
+        }
     },
-     const 13 = {
+    {
         Name: "Millard Fillmore",
         PlaceofBirth: "Cayuga Co., New York",
-        photo: "https://loc.gov/resource/cph.3a53286/"
+        location: {
+            latitude: 43,
+            longitude: 76
+        }
      },
-     const 14 = {
+     {
         Name: "Franklin Pierce",
         PlaceofBirth: "Hillsborough, New Hampshire",
-        photo: "https://loc.gov/resource/cph.3a53287/"
+        location: {
+            latitude: 43,
+            longitude: 71
+        }
     },
-     const 15 = {
+      {
         Name: "James Buchanan",
         PlaceofBirth:"Cove Gap Pennsylvania",
-        photo: "https://loc.gov/resource/cph.3b42465/"
+        location: {
+            latitude: 39,
+            longitude: 77
+        }
     },
-     const 16 = {
+     {
         Name: "Abraham Lincoln",
         PlaceofBirth:"LaRue Co., Kentucky",
-        photo: "https://loc.gov/resource/ppmsca.19301/"
+        location: {
+            latitude: 37,
+            longitude: 75
+        }
     },
-     const 17 = {
-        Name: "Andrew Johnson"
+     {
+        Name: "Andrew Johnson",
         PlaceofBirth: "Raleigh, North Carolina",
-        photo: "https://loc.gov/resource/cph.3a53290/"
+        location: {
+            latitude: 35,
+            longitude: 78
+        }
     },
-     const 18 = {
+     {
         Name: "Ulysses S. Grant",
         PlaceofBirth: "Point Pleasant, Ohio",
-        photo: "https://loc.gov/resource/cph.3a05520/"
+        location: {
+            latitude: 38,
+            longitude: 84
+        }
     },
-     const 19 = {
+     {
         Name: "Rutherford B. Hayes",
         PlaceofBirth: "Delaware, Ohio",
-        photo: "https://loc.gov/resource/cph.3a53292/"
+        location: {
+            latitude: 40,
+            longitude: 83
+        }
     },
-     const 20 = {
+     {
         Name: "James A. Garfield",
         PlaceofBirth:"Cuyahoga Co., Ohio",
-        photo: "https://loc.gov/resource/cph.3a53293/"
+        location: {
+            latitude: 41,
+            longitude: 81
+        }
     },
-    const 21 = {
+     {
         Name: "Chester Arthur",
         PlaceofBirth:"Fairfield, Vermont",
-        photo: "https://loc.gov/resource/cph.3a53294/"
+        location: {
+            latitude: 44,
+            longitude: 72
+        }
     },
-    const 22 = {
+    {
         Name: "Grover Cleveland",
         PlaceofBirth:"Caldwell, New Jersey",
-        photo: "https://loc.gov/resource/cph.3b37829/"
+        location: {
+            latitude: 40,
+            longitude: 74
+        }
     },
-    const 23 = {
+     {
         Name: "Benjamin Harrison",
         PlaceofBirth: "North Bend, Ohio",
-        photo: "https://loc.gov/resource/cph.3a10254/"
+        location: {
+            latitude: 39,
+            longitude: 84
+        }
     },
-    const 24 = {
+     {
         Name: "William McKinley",
         PlaceofBirth: "Niles, Ohio",
-        photo: "https://loc.gov/resource/cph.3a10814/"
+        location: {
+            latitude: 41,
+            longitude: 80
+        }
     },
-    const 25 = {
+     {
         Name: "Theodore Roosevelt",
         PlaceofBirth:"New York, New York",
-        photo: "https://loc.gov/resource/cph.3a53299/"
+        location: {
+            latitude: 40,
+            longitude: 74
+        }
     },
-    const 26 = {
+     {
         Name: "William Howard Taft",
         PlaceofBirth: "Cincinnati, Ohio",
-        photo: "https://loc.gov/resource/cph.3a53300/"
+        location: {
+            latitude: 39,
+            longitude: 84
+        }
     },
-    const 27 = {
+     {
         Name: "Woodrow Wilson",
         PlaceofBirth: "Staunton, Virginia",
-        photo: "https://loc.gov/resource/cph.3a55007/"
+        location: {
+            latitude: 38,
+            longitude: 79
+        }
     },
-    const 28 = {
+    {
         Name: "Warren G. Harding",
         PlaceofBirth: "Morrow County, Ohio",
-        photo: "https://loc.gov/resource/cph.3a53301/"
+        location: {
+            latitude: 40,
+            longitude: 82
+        }
     },
-    const 29 = {
+     {
         Name: "Calvin Coolidge",
         PlaceofBirth:"Plymouth, Vermont",
-        photo: "https://loc.gov/resource/cph.3a53302/"
+        location: {
+            latitude: 43,
+            longitude: 72
+        }
     }, 
-    const 30 = {
+   {
         Name: "Herbert Hoover",
         PlaceofBirth:"West Branch, Iowa",
-        photo: "https://loc.gov/resource/cph.3a25105/"
+        location: {
+            latitude: 41,
+            longitude: 91
+        }
     },
-     const 31 = {
+     {
         Name: "Franklin Roosevelt",
         PlaceofBirth:"Hyde Park, New York",
-        photo: "https://loc.gov/resource/cph.3c17121/"
+        location: {
+            latitude: 41,
+            longitude: 73
+        }
     },
-     const 32 = {
+     {
         Name: "Harry S. Trueman",
         PlaceofBirth: "Lamar, Missouri",
-        photo: "https://loc.gov/resource/cph.3c17122/"
-    },
-     const 33 = {
+        location: {
+            latitude: 37,
+            longitude: 94
+        }
+     },
+      {
         Name: "Dwight Eisenhower",
         PlaceofBirth: "Denison, Texas",
-        photo: "https://loc.gov/resource/cph.3c17123/"
+        location: {
+            latitude: 33,
+            longitude: 96
+        }
     },
-     const 34 = {
+      {
         Name: "John F. Kennedy",
         PlaceofBirth: "Brookline, Massachussets",
-        photo: "https://loc.gov/resource/ppmsca.38698/"
+        location: {
+            latitude: 42,
+            longitude: 71
+        }
     },
-     const 35 = {
+     {
         Name: "Lyndon B. Johnson",
         PlaceofBirth: "Gillspie Co., Texas",
-        photo: "https://loc.gov/resource/cph.3a53305/"
+        location: {
+            latitude: 30,
+            longitude: 98
+        }
     },
-     const 36 = {
+     {
         Name: "Richard Nixon",
-        PlaceofBirth: "Yorba Linda, California"
-        photo: "https://loc.gov/resource/cph.3a53306/"
+        PlaceofBirth: "Yorba Linda, California",
+        location: {
+            latitude: 33,
+            longitude: 117
+        }
     },
-     const 37 = {
+   {
         Name: "Gerald Ford",
         PlaceofBirth:"Omaha, Nebraska",
-        photo: "https://loc.gov/resource/ppmsc.02800/"
+        location: {
+            latitude: 41,
+            longitude: 96
+        }
     },
-     const 38 = {
+      {
         Name: "Jimmy Carter",
         PlaceofBirth:"Plains, Georgia",
-        photo: "https://loc.gov/resource/cph.3b52090/"
+        location: {
+            latitude: 32,
+            longitude: 84
+        }
     },
-     const 39 = {
+     {
         Name: "Ronald Reagan", 
         PlaceofBirth: "Tampico, Illinois",
-        photo: "https://loc.gov/resource/cph.3a53308/"
+        location: {
+            latitude: 41,
+            longitude: 89
+        }
     },
-     const 40 = {
+     {
         Name: "George Bush",
         PlaceofBirth: "Milton Massachussets",
-        photo: "https://loc.gov/resource/cph.3b46147/"
+        location: {
+            latitude: 42,
+            longitude: 71
+        }
     },
-     const 41 = {
+      {
         Name: "Bill Clinton",
         PlaceofBirth: "Hope, Arkansas",
-        photo: "https://loc.gov/resource/cph.3c07700/"
+        location: {
+            latitude: 33,
+            longitude: 93
+        }
     },
-     const 42 = {
+     {
         Name: "George W Bush",
         PlaceofBirth:"New Haven, Conneticut",
-        photo: "https://loc.gov/resource/ppbd.00371/"
+        location: {
+            latitude: 41,
+            longitude: 72
+        }
     },
-     const 43 = {
+      {
         Name: "Barrack Obama",
         PlaceofBirth: "Honolulu, Hawaii",
-        photo: "https://loc.gov/resource/ppbd.00358/"
-    }
-     const 44 = {
+        location: {
+            latitude: 21,
+            longitude: 157
+        }
+    },
+     {
         Name: "Donald Trump",
         PlaceofBirth: "new York, New York",
-        photo: "https://loc.gov/resource/ppbd.00608/"
+        location: {
+            latitude: 40,
+            longitude: 74
+        }
     },
-     const 45 = {
+      {
         Name: "Joe Biden",
         PlaceofBirth: "Scranton, Pennsylvania",
-        photo: "https://loc.gov/resource/ppbd.01261/"
+        location: {
+            latitude: 41,
+            longitude: 75
+        }
     }
-     
-}
+]
 
-https://loc.gov/resource/ppbd.01261/
