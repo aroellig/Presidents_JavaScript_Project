@@ -1,15 +1,26 @@
 
-<div id='map-holder'>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Map of the US</title>
+    <title>D3 World Map</title>
     <style>
     path {
         stroke: white;
         stroke-width: 0.5px;
         fill: black;
     }
+    path {
+  stroke-width: 1;
+  stroke: #ffffff;
+}
+
+path:hover {
+  fill: blue;
+  cursor: pointer;
+}
+
+
     </style>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
@@ -21,8 +32,6 @@ const height = 600;
 const svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
-
-
  
 const projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2]) 
@@ -37,124 +46,187 @@ if (error) throw error;
         .enter()
         .append('path')
         .attr("d", path)
+
+        svg.selectAll('path')
+   .data(uState.features)
+   .enter()
+   .append('path')
+   .attr("d", path)
+   .attr('class', 'state')
+
+  
 });
 
-const test = {
-        Name: 'George Washington',
-        PlaceofBirth: "Westmoreland Co, VA",
-        location: {
-            latitude: 38,
-            longitude: 76
-        }
-    }
- 
-// svg.selectAll('.pin')
-//    .data(test)
-//    .enter()
-//    .append('path')
-//    .attr("d", path)
-//    .attr('class', 'state')
 
+	
 
-
-const pin = svg.selectAll("g")
-  .data(test)
-  .enter().append("circle", ".pin")
-  .attr("font-size", 10)
-  .join("g")
-//   .attr("transform", function(d) {
-    // return "translate(" + projection([
-    //   d.location.longitude,
-    //   d.location.latitude
-    // ]) + ")";
-//   }
-pin.append("g")
-  .attr("transform", function(test) {
-    return "translate(" + projection([
-      test.location.longitude,
-      test.location.latitude
-    ]) + ")";
-  }
-.append("circle").attr("r", 10)
-// document.body.appendChild(svg.node());
 
 </script>
-</div>
+</body>
+</html>
 
 
-
-
+   
+  
+    
     <div class ="row">
         <div class ="column">
 
-     <img src ="./presidents/washington.jpg" title ="George Washington">
-    <img src ="./presidents/adams.jpg" title ="John Adams">
-    <img src ="./presidents/jefferson.jpg" title ="Thomas Jefferson">
-    <img src ="./presidents/madison.jpg" title ="James Madison">
-    <img src ="./presidents/monroe.jpg" title ="James Monroe">
-    <img src ="./presidents/johnquincyadams.jpg" title ="John Quincy Adams">
-    <img src ="./presidents/jackson.jpg" title ="Andrew Jackson">
-    <img src ="./presidents/vanburen.jpg" title ="Martin Van Buren">
-    <img src ="./presidents/henryharrison.jpg" title ="William Henry Harrison">
+            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Virginia_in_United_States.svg/1920px-Virginia_in_United_States.svg.png">
+                <img src="./presidents/washington.jpg" title='George Washington'>
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Massachusetts_in_United_States_%28zoom%29.svg/1280px-Massachusetts_in_United_States_%28zoom%29.svg.png">
+                <img src ="./presidents/adams.jpg" title ="John Adams">
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Virginia_in_United_States.svg/1920px-Virginia_in_United_States.svg.png">
+                <img src ="./presidents/jefferson.jpg" title ="Thomas Jefferson">
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Virginia_in_United_States.svg/1920px-Virginia_in_United_States.svg.png">
+                <img src ="./presidents/madison.jpg" title ="James Madison">
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Virginia_in_United_States.svg/1920px-Virginia_in_United_States.svg.png">
+                <img src ="./presidents/monroe.jpg" title ="James Monroe">
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Massachusetts_in_United_States_%28zoom%29.svg/1280px-Massachusetts_in_United_States_%28zoom%29.svg.png">
+                <img src ="./presidents/johnquincyadams.jpg" title ="John Quincy Adams">
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/8/8e/South_Carolina_in_United_States.svg">
+                <img src ="./presidents/jackson.jpg" title ="Andrew Jackson">
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/0/06/New_York_in_United_States.svg">
+                <img src ="./presidents/vanburen.jpg" title ="Martin Van Buren">
+              </a>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Virginia_in_United_States.svg/1920px-Virginia_in_United_States.svg.png">
+                <img src ="./presidents/henryharrison.jpg" title ="William Henry Harrison">
+              </a>
+    
+    
     
     </div>
 
     
     <div class="column">
-    <img src ="./presidents/polk.jpg" title ="James Polk">
-    <img src ="./presidents/taylor.jpg" title ="Zachary Taylor">
-    <img src ="./presidents/fillmore.jpg" title ="Millard Fillmore">
-    <img src ="./presidents/pierce.jpg" title ="Franklin Pierce">
-    <img src ="./presidents/buchanan.jpg" title ="James Buchanan">
-    <img src ="./presidents/lincoln.jpg" title ="Abraham Lincoln">
-    <img src ="./presidents/johnson.jpg" title ="Andrew Johnson">
-    <img src ="./presidents/grant.jpg" title ="Ulysses S. Grant">
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/North_Carolina_in_United_States.svg/800px-North_Carolina_in_United_States.svg.png">
+            <img src ="./presidents/polk.jpg" title ="James Polk">
+          </a>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Virginia_in_United_States.svg/1920px-Virginia_in_United_States.svg.png">
+            <img src ="./presidents/taylor.jpg" title ="Zachary Taylor">
+          </a>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/New_Hampshire_in_United_States.svg/800px-New_Hampshire_in_United_States.svg.png">
+            <img src ="./presidents/pierce.jpg" title ="Franklin Pierce">
+          </a>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Pennsylvania_in_United_States.svg/800px-Pennsylvania_in_United_States.svg.png">
+            <img src ="./presidents/buchanan.jpg" title ="James Buchanan">
+          </a>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kentucky_in_United_States.svg/800px-Kentucky_in_United_States.svg.png">
+            <img src ="./presidents/lincoln.jpg" title ="Abraham Lincoln">
+          </a>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/North_Carolina_in_United_States.svg/800px-North_Carolina_in_United_States.svg.png">
+            <img src ="./presidents/johnson.jpg" title ="Andrew Johnson">
+          </a>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ohio_in_United_States.svg/800px-Ohio_in_United_States.svg.png">
+            <img src ="./presidents/grant.jpg" title ="Ulysses S. Grant">
+          </a>
+</div>
+
+<div class="column">
+
+    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ohio_in_United_States.svg/800px-Ohio_in_United_States.svg.png">
+        <img src ="./presidents/hayes.jpg" title ="Rutherford B. Hayes">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ohio_in_United_States.svg/800px-Ohio_in_United_States.svg.png">
+        <img src ="./presidents/garfield.jpg" title ="James A. Garfield">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Vermont_in_United_States_%28zoom%29.svg/800px-Vermont_in_United_States_%28zoom%29.svg.png">
+        <img src ="./presidents/arthur.jpg" title ="Chester A. Arthur">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/New_Jersey_in_United_States_%28zoom%29.svg/800px-New_Jersey_in_United_States_%28zoom%29.svg.png">
+        <img src ="./presidents/cleveland.jpg" title ="Grover Cleveland">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ohio_in_United_States.svg/800px-Ohio_in_United_States.svg.png">
+        <img src ="./presidents/harrison.jpg" title ="Benjamin Harrison">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ohio_in_United_States.svg/800px-Ohio_in_United_States.svg.png">
+        <img src ="./presidents/mckinley.jpg" title ="William McKinley">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/0/06/New_York_in_United_States.svg">
+        <img src ="./presidents/teddyroosevelt.jpg" title ="Theodore Roosevelt">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ohio_in_United_States.svg/800px-Ohio_in_United_States.svg.png">
+        <img src ="./presidents/taft.jpg" title ="William Howard Taft">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Virginia_in_United_States.svg/1920px-Virginia_in_United_States.svg.png">
+        <img src ="./presidents/wilson.jpg" title ="Woodrow Wilson">
+      </a>
+    
+    
    
-</div>
-<div class="column">
-
-    <img src ="./presidents/hayes.jpg" title ="Rutherford B. Hayes">
-    <img src ="./presidents/garfield.jpg" title ="James A. Garfield">
-    <img src ="./presidents/arthur.jpg" title ="Chester A. Arthur">
-    <img src ="./presidents/cleveland.jpg" title ="Grover Cleveland">
-    <img src ="./presidents/harrison.jpg" title ="Benjamin Harrison">
-    <img src ="./presidents/mckinley.jpg" title ="William McKinley">
-    <img src ="./presidents/teddyroosevelt.jpg" title ="Theodore Roosevelt">
-    <img src ="./presidents/taft.jpg" title ="William Howard Taft">
-    <img src ="./presidents/wilson.jpg" title ="Woodrow Wilson">
+    
+    
     
 </div>
 <div class="column">
-
-
-    <img src ="./presidents/harding.jpg" title ="Warren G Harding">
-    <img src ="./presidents/coolidge.jpg" title ="Calvin Coolidge">
-    <img src ="./presidents/hoover.jpg" title ="Herbert Hoover">
-    <img src ="./presidents/fdr.jpg" title ="Franklin D. Roosevelt">
-    <img src ="./presidents/truman.jpg" title ="Harry S. Truman">
-    <img src ="./presidents/Eisenhower.jpg" title ="Dwight D. Eisenhower">
-    <img src ="./presidents/kennedy.jpg" title ="John F. Kennedy">
-    <img src ="./presidents/lbj.jpg" title ="Lyndon B. Johnson">
-    <img src ="./presidents/nixon.jpg" title ="Richard Nixon">
-    
+    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ohio_in_United_States.svg/800px-Ohio_in_United_States.svg.png">
+        <img src ="./presidents/harding.jpg" title ="Warren G Harding">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Vermont_in_United_States_%28zoom%29.svg/800px-Vermont_in_United_States_%28zoom%29.svg.png">
+        <img src ="./presidents/coolidge.jpg" title ="Calvin Coolidge">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Iowa_in_United_States.svg/800px-Iowa_in_United_States.svg.png">
+        <img src ="./presidents/hoover.jpg" title ="Herbert Hoover">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/0/06/New_York_in_United_States.svg">
+        <img src ="./presidents/fdr.jpg" title ="Franklin D. Roosevelt">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Missouri_in_United_States.svg/800px-Missouri_in_United_States.svg.png">
+        <img src ="./presidents/truman.jpg" title ="Harry S. Truman">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Texas_in_United_States.svg/800px-Texas_in_United_States.svg.png">
+        <img src ="./presidents/Eisenhower.jpg" title ="Dwight D. Eisenhower">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Massachusetts_in_United_States_%28zoom%29.svg/1280px-Massachusetts_in_United_States_%28zoom%29.svg.png">
+        <img src ="./presidents/kennedy.jpg" title ="John F. Kennedy">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Texas_in_United_States.svg/800px-Texas_in_United_States.svg.png">
+        <img src ="./presidents/lbj.jpg" title ="Lyndon B. Johnson">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/California_in_United_States.svg/800px-California_in_United_States.svg.png">
+        <img src ="./presidents/nixon.jpg" title ="Richard Nixon">
+      </a>
 
 </div>
 <div class="column">
-
-
-    <img src ="./presidents/ford.jpg" title ="Gerald Ford">
-    <img src ="./presidents/carter.jpg" title ="Jimmy Carter">
-    <img src ="./presidents/reagan.jpg" title ="Ronald Reagan">
-    <img src ="./presidents/hwBush.jpg" title ="George H. W. Bush">
-    <img src ="./presidents/clinton.jpg" title ="Bill Clinton">
-    <img src ="./presidents/Wbush.jpg" title ="George W. Bush">
-    <img src ="./presidents/obama.jpg" title ="Barrack Obama">
-    <img src ="./presidents/doofus.jpg" title ="Donald Trump">
-    <img src ="./presidents/biden.jpg" title ="Joe Biden">
+    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Nebraska_in_United_States.svg/800px-Nebraska_in_United_States.svg.png">
+        <img src ="./presidents/ford.jpg" title ="Gerald Ford">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Georgia_in_United_States.svg/800px-Georgia_in_United_States.svg.png">
+        <img src ="./presidents/carter.jpg" title ="Jimmy Carter">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Illinois_in_United_States.svg/800px-Illinois_in_United_States.svg.png">
+        <img src ="./presidents/reagan.jpg" title ="Ronald Reagan">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Massachusetts_in_United_States_%28zoom%29.svg/1280px-Massachusetts_in_United_States_%28zoom%29.svg.png">
+        <img src ="./presidents/hwBush.jpg" title ="George H. W. Bush">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Arkansas_in_United_States.svg/800px-Arkansas_in_United_States.svg.png">
+        <img src ="./presidents/clinton.jpg" title ="Bill Clinton">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/New_Hampshire_in_United_States.svg/800px-New_Hampshire_in_United_States.svg.png">
+        <img src ="./presidents/Wbush.jpg" title ="George W. Bush">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hawaii_in_United_States_%28zoom%29_%28US50%29_%28-grid%29.svg/800px-Hawaii_in_United_States_%28zoom%29_%28US50%29_%28-grid%29.svg.png">
+        <img src ="./presidents/obama.jpg" title ="Barrack Obama">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/0/06/New_York_in_United_States.svg">
+        <img src ="./presidents/doofus.jpg" title ="Donald Trump">
+      </a>
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Pennsylvania_in_United_States.svg/800px-Pennsylvania_in_United_States.svg.png">
+        <img src ="./presidents/biden.jpg" title ="Joe Biden">
+      </a>
 </div>
 </div>
 
 
 </body>
 </html>
-
+ -->

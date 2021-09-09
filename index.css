@@ -3,11 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     padding:  200px;
-  }
-  
+  } */
 
-  /* Create two equal columns that sits next to each other */
-  .column {
+
+   .column { 
     flex: 100%;
     padding-left: 200px;
   }
@@ -18,10 +17,20 @@
   vertical-align: middle;
 }
 
+.column img {
+  margin-top: 200px;
+  vertical-align: middle;
+} 
 
-.pin{
-  fill:#3c373d;
+.column img:hover {
+  fill: red;
+  cursor: pointer;
 }
+
+
+
+
+
 /* .column img .btn {
   position: absolute;
   top: 50%;
