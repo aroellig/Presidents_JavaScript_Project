@@ -1,1 +1,33 @@
-!function(){"use strict";document.querySelector(".btn").addEventListener("click",(function(){document.body.classList.toggle("dark-theme");var t=document.body.className;this.textContent="light-theme"==t?"Dark":"Light",console.log("current class name: "+t)}))}();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ (function() {
+
+eval("\n   \n\n   const switcher = document.querySelector('.btn');\n   \n   switcher.addEventListener('click', function() {\n       document.body.classList.toggle('dark-theme')\n   \n       var className = document.body.className;\n       if(className == \"light-theme\") {\n           this.textContent = \"Dark\";\n       }\n       else {\n        this.textContent = \"Light\";\n       }\n   \n       console.log('current class name: ' + className);\n   \n   });\n\n\n\n//# sourceURL=webpack://JavaScriptProject/./src/index.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/index.js"]();
+/******/ 	
+/******/ })()
+;
