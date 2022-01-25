@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
@@ -16,7 +15,7 @@
   \**********************/
 /***/ (function() {
 
-eval("\n   \n\n   const switcher = document.querySelector('.btn');\n   \n   switcher.addEventListener('click', function() {\n       document.body.classList.toggle('dark-theme')\n   \n       var className = document.body.className;\n       if(className == \"light-theme\") {\n           this.textContent = \"Dark\";\n       }\n       else {\n        this.textContent = \"Light\";\n       }\n   \n       console.log('current class name: ' + className);\n   \n   });\n\n\n\n//# sourceURL=webpack://JavaScriptProject/./src/index.js?");
+eval("const pres = [\"George Washington\", \"John Adams\", \"Thomas Jefferson\", \"James Madison\", \"James Monroe\", \"John Quincy Adams\", \"Andrew Jackson\", \"Martin Van Buren\", \"William Henry Harrison\", \"John Tyler\", \"James Polk\", \"Zachary Taylor\", \"Millard Fillmore\", \"Franklin Pierce\", \"James Buchanan\", \"Abraham Lincoln\", \"Andrew Johnson\", \"Ulysses Grant\", \"Rutherford Hayes\", \"James Garfield\", \"Chester Arthur\", \"Grover Celveland\", \"Benjamin Harrison\", \"William McKinley\", \"Theordore Roosevelt\", \"William Taft\", \"Woodrow Wilson\", \"Warren Harding\", \"Calvin Coolidge\", \"Herbert Hoover\", \"Franklin Roosevelt\", \"Harry Truman\", \"Dwight Eisenhower\", \"John Kennedy\", \"Lyndon Johnson\", \"Richard Nixon\", \"Gerald Ford\", \"Jimmy Carter\", \"Ronald Reagan\", \"George H. W. Bush\", \"Bill Clinton\", \"George W. Bush\", \"Barrack Obama\", \"Donald Trump\", \"Joe Biden\"]\n\n\n\n//# sourceURL=webpack://JavaScriptProject/./src/index.js?");
 
 /***/ })
 
