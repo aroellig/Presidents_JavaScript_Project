@@ -70,6 +70,7 @@ const pres = ["George Washington", "John Adams", "Thomas Jefferson", "James Madi
     createPresident(biden, "Joe Biden", "He is the oldest president in us history")
     
 
+ 
     buttons.forEach(function(button){
         button.addEventListener('click', function(e){
             if (e.target.parentElement.classList.contains('prevBtn')){
@@ -77,21 +78,20 @@ const pres = ["George Washington", "John Adams", "Thomas Jefferson", "James Madi
                     index = customers.length
                }
                index--
-               customerImage.src = customers[index].img
-               customerName.textContent = customers[index].name
-               customerText.textContent = customers[index].text
+               presidentImage.src = presidents[index].img
+               presidentName.textContent = presidents[index].name
+               presidentText.textContent = presidents[index].text
             }
             if (e.target.parentElement.classList.contains('nextBtn')){
                 index++
-                if(index === customers.length){
+                if(index === presidents.length){
                      index = 0
                 }
-                customerImage.src = customers[index].img
-                customerName.textContent = customers[index].name
-                customerText.textContent = customers[index].text
+                presidentImage.src = presidents[index].img
+                presidentName.textContent = presidents[index].name
+                presidentText.textContent = presidents[index].text
              }
         })
     })
- 
     
 })()
