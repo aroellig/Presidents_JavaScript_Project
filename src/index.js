@@ -96,97 +96,78 @@
     
 // })()
 
-function check(){
-    var c = 0;
-    var q1= document.quiz.question1.value;
-    var q2= document.quiz.question2.value;
-    var q3= document.quiz.question3.value;
-    var q4= document.quiz.question4.value;
-    var q5= document.quiz.question5.value;
-    var q6= document.quiz.question6.value;
-    var q7= document.quiz.question7.value;
-    var q8= document.quiz.question8.value;
-    var q9= document.quiz.question9.value;
-    var q10= document.quiz.question10.value;
-    var q11= document.quiz.question11.value;
-    var q12= document.quiz.question12.value;
-    var q13= document.quiz.question13.value;
-    var q14= document.quiz.question14.value;
-    var q15= document.quiz.question15.value;
-    var q16= document.quiz.question16.value;
-    var q17= document.quiz.question17.value;
-    var q18= document.quiz.question18.value;
-    var q19= document.quiz.question19.value;
-    var q20= document.quiz.question20.value;
-    var q21= document.quiz.question21.value;
-    var q22= document.quiz.question22.value;
-    var q23= document.quiz.question23.value;
-    var q24= document.quiz.question24.value;
-    var q25= document.quiz.question25.value;
-    var q26= document.quiz.question26.value;
-    var q27= document.quiz.question27.value;
-    var q28= document.quiz.question28.value;
-    var q29= document.quiz.question29.value;
-    var q30= document.quiz.question30.value;
-    var q31= document.quiz.question31.value;
-    var q32= document.quiz.question32.value;
-    var q33= document.quiz.question33.value;
-    var q34= document.quiz.question34.value;
-    var q35= document.quiz.question35.value;
-    var q36= document.quiz.question36.value;
-    var q37= document.quiz.question37.value;
-    var q38= document.quiz.question38.value;
-    var q39= document.quiz.question39.value;
-    var q40= document.quiz.question40.value;
-    var q41= document.quiz.question41.value;
-    var q42= document.quiz.question42.value;
-    var q43= document.quiz.question43.value;
-    var q44= document.quiz.question44.value;
-    var q45= document.quiz.question45.value;
-    if(q1 === "a"){ c++}
-    if(q2 === "b"){ c++}
-    if(q3 === "c"){ c++}
-    if(q4 === "a"){ c++}
-    if(q5 === "c"){ c++}
-    if(q6 === "a"){ c++}
-    if(q7 === "d"){ c++}
-    if(q8 === "b"){ c++}
-    if(q9 === "c"){ c++}
-    if(q10 === "d"){ c++}
-    if(q11 === "a"){ c++}
-    if(q12 === "b"){ c++}
-    if(q13 === "a"){ c++}
-    if(q14 === "c"){ c++}
-    if(q15 === "d"){ c++}
-    if(q16 === "b"){ c++}
-    if(q17 === "a"){ c++}
-    if(q18 === "c"){ c++}
-    if(q19 === "d"){ c++}
-    if(q20 === "a"){ c++}
-    if(q21 === "d"){ c++}
-    if(q22 === "c"){ c++}
-    if(q23 === "b"){ c++}
-    if(q24 === "a"){ c++}
-    if(q25 === "b"){ c++}
-    if(q26 === "c"){ c++}
-    if(q27 === "b"){ c++}
-    if(q28 === "d"){ c++}
-    if(q29 === "c"){ c++}
-    if(q30 === "a"){ c++}
-    if(q31 === "b"){ c++}
-    if(q32 === "a"){ c++}
-    if(q33 === "c"){ c++}
-    if(q34 === "d"){ c++}
-    if(q35 === "b"){ c++}
-    if(q36 === "a"){ c++}
-    if(q37 === "c"){ c++}
-    if(q38 === "b"){ c++}
-    if(q39 === "d"){ c++}
-    if(q40 === "a"){ c++}
-    if(q41 === "b"){ c++}
-    if(q42 === "c"){ c++}
-    if(q43 === "b"){ c++}
-    if(q44 === "a"){ c++}
-    if(q45 === "c"){ c++}
-    document.write(c)
+const questionNumber = document.querySelector(".question-number")
+const presidentName = document.querySelector(".president-name")
+const presidentFacts = document.querySelector(".president-facts")
+
+let numPresidents = 0;
+let currentPresident;
+let availablePresidents = [];
+let availableFacts = [];
+
+
+function setAvailablePresidents(){
+    for(let i = 0; i < presidents.length; i++){
+        availablePresidents.push(presidents[i])
+    }
+    console.log(availablePresidents)
 }
+
+function getNewPresident(){
+    questionNumber.innerHTML = numPresidents + 0;
+    const presidentsIndex = availablePresidents[Math.floor(Math.random() * availablePresidents.length)]
+    currentPresident = presidentsIndex;
+    presidentName.innerHTML = currentPresident.name;
+    const index1 = availablePresidents.indexOf(presidentsIndex);
+    availablePresidents.splice(index1, 1);
+    factsLength = currentPresident.facts.length;
+    for(let i = 0; i < factsLength; i++){
+        availableFacts.push[i]
+    }
+   for(let i = 0; i< factsLength; i++){
+
+       const factIndex = availableFacts[Math.floor(Math.random() * availableFacts.length)];
+
+       const index2 = availableFacts.indexOf(factIndex);
+       availableFacts.splice(index2, 1)
+       const fact = document.createElement('div');
+       fact.innerHTML = currentPresident.facts[i];
+       fact.id = i;
+       fact.className = "fact";
+       presidentFacts.appendChild(fact);
+       fact.setAttribute('onclick', 'getResult(this)')
+   }
+    numPresidents ++ 
+}
+
+function getResult(factElement){
+const id = parseInt(factElement.id);
+if(id === currentPresident.answer){
+    factElement.classList.add('correct')
+}else{
+    factElement.classList.add('wrong')
+}
+unclickable()
+}
+
+function unclickable(){
+    
+    factLength = presidentFacts.children.length
+    for(let i = 0; i < factLength; i++){
+        presidentFacts.children[i].classList.add("already-clicked")
+    }
+}
+
+function next(){
+    if (numPresidents === presidents.length){
+        console.log("finish")
+    } else {
+        getNewPresident();
+    }
+}
+
+ window.onload = function() {
+     setAvailablePresidents();
+     getNewPresident();
+
+ }
