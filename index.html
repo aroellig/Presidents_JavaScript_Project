@@ -3,24 +3,26 @@
 
 <head>
 <title>Presidents quiz</title>
-<link rel="stylesheet" type="text/css" href='quiz.css'>
+<link rel="stylesheet" type="text/css" href='src/index.css'>
 <script type="text/javascript" src="data.js"></script>
 </head>
 
 <body>
-    <div class ="start">
-        <h1>Instructions</h1>
-        <p>You will be given five randomly selected presidents. Try and guess which one of the facts presented below them is true for each president</p>
-        <button type="button" class="btn">Begin</button>
+    <div class ="intro hide">
+        <h1>Presidents Trivia</h1>
+        <p>Test your knowledge of US presidents. You must choose the correct fact for each US president</p>
+        <button type="button" class="start-btn">Begin</button>
     </div>
 <div class="overall">
-    <div class="quiz-box">
+    <div class="quiz-box ">
         <div class="question-number"></div>
-        <div class="president-name"></div>
         <div class="image"></div>
-        <div class="president-facts"></div>
+        <div class="president-name"></div>
+        <div class="president-facts">
+            <div className="fact"></div>
+        </div>
         <div class="next-button">
-            <button type="button" class="btn" onclick="next()">Next President</button>
+            <button type="button" class="next-btn" onclick="next()">Next President</button>
         </div>
         <div class="correct-fact"></div>
         <div class="result">finish</div>

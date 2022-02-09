@@ -1,81 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
 
-.button1 {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
+body {
+  margin: 0;
+  font-size: 18px;
+  background-color: white;
+  font-family: 'Kolker Brush', cursive;
+  font-weight: 400;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: black;
+}
+
+.intro.hide{
+  display: none;
+}
+.intro{
+  max-width: 700px;
+  background-color: grey;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.intro h1{
+  font-size: 70px;
+  font-weight: 500;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding:  200px;
-  } */
 
+.intro p{
+ font-weight: 500;
+}
 
-   .column { 
-    flex: 100%;
-    padding-left: 200px;
-  }
+.start-btn{
+  padding: 15px 45px;
+  font-family: 'Kolker Brush', cursive;
+  font-size: 40px;
+  border: black;
+  border-style: ridge;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.quiz-box{
+  background-color: cadetblue;
+  max-width: 700px;
+  margin: 150px auto;
+  padding: 30px;
+  border-radius: 10px;
   
+}
+
+.quiz-box .question-number{
+  font-size: 50px;
+  
+}
+
+.quiz-box .image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.quiz-box .president-name{
+  font-size: 50px;
+}
+
+.quiz-box .next-btn{
+  padding: 15px 45px;
+  font-family: 'Kolker Brush', cursive;
+  font-size: 40px;
+  border: black;
+  border-style: ridge;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.quiz-box .president-facts{
  
-.column img {
-  margin-top: 200px;
-  vertical-align: middle;
-}
-
-.column img {
-  margin-top: 200px;
-  vertical-align: middle;
-} 
-
-.column img:hover {
-  fill: red;
-  cursor: pointer;
-}
-
-.factoids{
-  color: blue;
 }
 
 
-
-
-
-/* .column img .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.quiz-box .president-facts .fact{
+  background-color: white;
+  padding: 10px;
+  line-height: 22px;
+  border-style: ridge;
+  border-radius: 10px;
+  line-height: 22px;
+  margin-bottom: 10px;
 }
-
-.column .btn:hover {
-  background-color: black;
-}
-
-
-	
-
-.state {
-  stroke-width: 1;
-  stroke: #ffffff;
-}
-
-	
-
-.state:hover {
-  fill: red;
-  cursor: pointer;
-} */

@@ -1,6 +1,7 @@
 const questionNumber = document.querySelector(".question-number")
 const presidentName = document.querySelector(".president-name")
 const presidentFacts = document.querySelector(".president-facts")
+const image = document.querySelector(".image")
 const correctFact = document.querySelector('.correct-fact')
 const overall = document.querySelector(".overall")
 const quiz = document.querySelector(".quiz-box")
@@ -28,10 +29,11 @@ function getNewPresident(){
     presidentName.innerHTML = currentPresident.name;
     const index1 = availablePresidents.indexOf(presidentsIndex);
     availablePresidents.splice(index1, 1);
+    image.innerHTML = ''
     if (currentPresident.hasOwnProperty("img")){
         const img = document.createElement("img")
         img.src = currentPresident.img
-        presidentName.appendChild(img)
+        image.appendChild(img)
     }
 
     const factsLength = currentPresident.facts.length;
