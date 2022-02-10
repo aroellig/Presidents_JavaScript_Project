@@ -103,8 +103,8 @@ const id = parseInt(factElement.id);
 if(id === currentPresident.answer){
     factElement.classList.add('correct')
     updateFact('correct')
-    // points ++
-    console.log(points)
+    points ++
+   
 }else{
     factElement.classList.add('wrong')
     factLength = presidentFacts.children.length
@@ -144,8 +144,6 @@ function correctAnswer(){
         const correct = document.createElement("div");
         correctFact.appendChild(correct)
     }
-    points ++
-    scores.innerHTML = points
 }
 
 function updateFact(mark){
@@ -155,12 +153,15 @@ function updateFact(mark){
 function finish(){
     quiz.classList.add('hide')
     result.classList.remove('hide')
-   score()
+   finalScore()
   
 }
 
-function score(){
-    points ++
+function finalScore(){
+    result.querySelector(".total-presidents").innerHTML = presidents.length;
+    result.querySelector(".total-correct").innerHTML = points;
+    result.querySelector(".percent").innerHTML = ((points/presidents.length) * 100).toFixed() + "%"
+    result.querySelector(".total-score").innerHTML= points +" / " + presidents.length
 }
  window.onload = function() {
      setAvailablePresidents();
