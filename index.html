@@ -13,6 +13,11 @@
         <p>Test your knowledge of US presidents. You must choose the correct fact for each US president</p>
         <button type="button" class="start-btn">Begin</button>
     </div>
+    <!-- <div class="presidents hide">
+        <div class="image"></div>
+        <div class="president-name"></div>
+           </div>
+       </div> -->
 <div class="overall">
     <div class="quiz-box ">
         <div class="question-number"></div>
@@ -24,9 +29,12 @@
         <div class="next-button">
             <button type="button" class="next-btn" onclick="next()">Next President</button>
         </div>
-        <div class="score"></div>
-        
+              <div class="correct-fact">
+              </div>
+              <div class="score"> </div>
    </div>
+
+  
     <div class="result hide">
         <h2>Final Score</h2>
         <table>
@@ -49,6 +57,331 @@
         </table>
         <button type="button" class="try-again-btn">Try Again</button>
     </div>
+    <!-- <div id="George Washington">
+        <p onclick="getNewPresident()"> George Washington</p>
+        <p><input type="radio" name="question1" value="a">(a)He is the only US president to have personally led US soldiers into battle while he was serving as the President of the United States</p>
+        <p><input type="radio" name="question1" value="b">(b)While studying at Princeton he stayed for an extra year which makes him the very first postgraduate student in the US </p>
+        <p><input type="radio" name="question1" value="c">(c)He loved to listen to Mocking Birds sing and he kept them as pets </p>
+        <p><input type="radio" name="question1" value="d">(d)Was a self made millionaire from discovering valuable metals all over the globe'</p>
+        <div class="next-button">
+            <button type="button" class="George Washington" onclick="next()">Next President</button>
+        </div>
+    </div>
+    <div id="president2">
+        <p>John Adams</p>
+        <p><input type="radio" name="question2" value="a">(a)Was known for being a man of very few words</p>
+        <p><input type="radio" name="question2" value="b">(b)He created the United States Marine Band in 1798 which is the oldest professional musical association in the US </p>
+        <p><input type="radio" name="question2" value="c">(c)Despite serving for thirty five years in the army and becoming a general, he never once saw active combat</p>
+        <p><input type="radio" name="question2" value="d">(d)He is the only president to have been impeached twice</p>
+    </div>
+    <div id="president3">
+        <p>Thomas Jefferson</p>
+        <p><input type="radio" name="question3" value="a">(a)He is the only president to have personally thwarted an assination attempt on his life</p>
+        <p><input type="radio" name="question3" value="b">(b)He was a very skilled fisherman </p>
+        <p><input type="radio" name="question3" value="c">(c)He loved to listen to Mocking Birds sing and he kept them as pets </p>
+        <p><input type="radio" name="question3" value="d">(d)Is the only US president to have served two non consectutive terms</p>
+    </div>
+    <div id="president4">
+        <p>James Madison</p>
+        <p><input type="radio" name="question4" value="a">(a)While studying at Princeton he stayed for an extra year which makes him the very first postgraduate student in the US</p>
+        <p><input type="radio" name="question4" value="b">(b)Was a very accomplished wrestler and only ever lost one out of three hundred matches</p>
+        <p><input type="radio" name="question4" value="c">(c)He was the youngest pilot in the navy while he served</p>
+        <p><input type="radio" name="question4" value="d">(d)He and his wife started the tradition of having Easter Egg rolls on the Whitehouse lawn</p>
+    </div>
+    <div id="president5">
+        <p>James Monroe</p>
+        <p><input type="radio" name="question5" value="a">(a)Every morning he would swim in the Potamac river for exercise</p>
+        <p><input type="radio" name="question5" value="b">(b)Was the fattest president and once got stuck in the Whitehouse bathtub </p>
+        <p><input type="radio" name="question5" value="c">(c) Was the US president who purchased Florida from the Spanish for five million</p>
+        <p><input type="radio" name="question5" value="d"> (d)He has won two grammy awards </p>
+    </div>
+    <div id="president6">
+        <p>John Quincy Adams</p>
+        <p><input type="radio" name="question6" value="a">(a)Every morning he would swim in the Potamac river for exercise</p>
+        <p><input type="radio" name="question6" value="b">(b)While studying at Princeton he stayed for an extra year which makes him the very first postgraduate student in the US </p>
+        <p><input type="radio" name="question6" value="c">(c)He was a gifted writer and his autobiography is considered to be one of the best ever written by a former president </p>
+        <p><input type="radio" name="question6" value="d">(d)He has won two grammy awards</p>
+    </div>
+    <div id="president7">
+        <p>Andrew Jackson</p>
+        <p><input type="radio" name="question7" value="a">(a)He was the first US president to have been born in the United States when it was its own country and not a British colony</p>
+        <p><input type="radio" name="question7" value="b">(b)Was afraid to touch lightbulbs out of fear of electrocution </p>
+        <p><input type="radio" name="question7" value="c">(c)His first career was that of a teacher</p>
+        <p><input type="radio" name="question7" value="d">(d)He is the only president to have personally thwarted an assination attempt on his life</p>
+    </div>
+    <div id="president8">
+        <p>Martin Van Buren</p>
+        <p><input type="radio" name="question8" value="a">(a)He is the only president who has never been married</p>
+        <p><input type="radio" name="question8" value="b">(b)He was the first US president to have been born in the United States when it was its own country and not a British colony</p>
+        <p><input type="radio" name="question8" value="c">(c)Was a self made millionaire from discovering valuable metals all over the globe </p>
+        <p><input type="radio" name="question8" value="d">(d)He was the first person in his family to graduate highschool</p>
+    </div>
+    <div id="president9">
+        <p>William Henry Harrison</p>
+        <p><input type="radio" name="question9" value="a">(a)He had fifteen children the most of any presiden</p>
+        <p><input type="radio" name="question9" value="b">(b)He is the only president who has never been married </p>
+        <p><input type="radio" name="question9" value="c">(c)He only served as president for one month, after which he died of pneumonia </p>
+        <p><input type="radio" name="question9" value="d">(d)He was a very skilled fisherman</p>
+    </div>
+    <div id="president10">
+        <p>John Tyler</p>
+        <p><input type="radio" name="question10" value="a">(a)When he was twelve his father made him walk for miles in a thunderstorm</p>
+        <p><input type="radio" name="question10" value="b">(b)He served as president and vice president despite never being elected to office</p>
+        <p><input type="radio" name="question10" value="c">(c)He was the first president to ever ride in an automobile</p>
+        <p><input type="radio" name="question10" value="d">(d)He had fifteen children the most of any president</p>
+    </div>
+    <div id="president11">
+        <p>James Polk</p>
+        <p><input type="radio" name="question11" value="a">(a)For two days every week he held office hours in which any citizen could visit him</p>
+        <p><input type="radio" name="question11" value="b">(b)Was the first catholic president </p>
+        <p><input type="radio" name="question11" value="c">(c)Married one of his students while he was teaching classes at a college </p>
+        <p><input type="radio" name="question11" value="d">(d)He and his wife started the tradition of having Easter Egg rolls on the Whitehouse lawn</p>
+    </div>
+    <div id="president12">
+        <p>Zachary Taylor</p>
+        <p><input type="radio" name="question12" value="a">(a)He is the oldest president in us history</p>
+        <p><input type="radio" name="question12" value="b">(b)He was unaware that he was nominated as presential candidate until he recieved a letter telling him so</p>
+        <p><input type="radio" name="question12" value="c">(c)He was blinded in one eye while boxing in the Whitehouse </p>
+        <p><input type="radio" name="question12" value="d">(d)Was known for being a man of very few words</p>
+    </div>
+    <div id="president13">
+        <p>Millard Filmoore</p>
+        <p><input type="radio" name="question13" value="a">(a)He did not have a vice president while he was president</p>
+        <p><input type="radio" name="question13" value="b">(b)Was a keen stamp collector</p>
+        <p><input type="radio" name="question13" value="c">(c)Every morning he would swim in the Potamac river for exercise </p>
+        <p><input type="radio" name="question13" value="d">(d)He is the only president to have personally thwarted an assination attempt on his life</p>
+    </div>
+    <div id="president14">
+        <p>Franklin Pierce</p>
+        <p><input type="radio" name="question14" value="a">(a)He is the only president who has never been married</p>
+        <p><input type="radio" name="question14" value="b">(b)He had fifteen children the most of any presiden</p>
+        <p><input type="radio" name="question14" value="c">(c)When he was twelve his father made him walk for miles in a thunderstorm</p>
+        <p><input type="radio" name="question14" value="d">(d)Was afraid to touch lightbulbs out of fear of electrocution </p>
+    </div>
+    <div id="president15">
+        <p>James Buchanan</p>
+        <p><input type="radio" name="question15" value="a">(a)Was the fattest president and once got stuck in the Whitehouse bathtub</p>
+        <p><input type="radio" name="question15" value="b">(b)Despite serving for thirty five years in the army and becoming a general, he never once saw active combat </p>
+        <p><input type="radio" name="question15" value="c">(c)His first career was that of a teacher</p>
+        <p><input type="radio" name="question15" value="d">(d)He is the only president who has never been married</p>
+    </div>
+    <div id="president16">
+        <p>Abraham Lincoln</p>
+        <p><input type="radio" name="question16" value="a">(a)Ordered desegregation of the Whitehouse and the District of Columbia</p>
+        <p><input type="radio" name="question16" value="b">(b)Was a very accomplished wrestler and only ever lost one out of three hundred matches </p>
+        <p><input type="radio" name="question16" value="c">(c)Was the first catholic president </p>
+        <p><input type="radio" name="question16" value="d">(d)He was the first person in his family to graduate highschool</p>
+    </div>
+    <div id="president17">
+        <p>Andrew Johnson</p>
+        <p><input type="radio" name="question17" value="a">(a)Was the first president to ever be impeached</p>
+        <p><input type="radio" name="question17" value="b">(b)When he was twelve his father made him walk for miles in a thunderstorm </p>
+        <p><input type="radio" name="question17" value="c">(c)He was a very skilled fisherman</p>
+        <p><input type="radio" name="question17" value="d">(d)Was a keen stamp collector </p>
+    </div>
+    <div id="president18">
+        <p>Ulysses Grant</p>
+        <p><input type="radio" name="question18" value="a">(a)He was a very skilled fisherman</p>
+        <p><input type="radio" name="question18" value="b">(b)Is the only US president to have served two non consectutive terms </p>
+        <p><input type="radio" name="question18" value="c">(c)He was a gifted writer and his autobiography is considered to be one of the best ever written by a former president</p>
+        <p><input type="radio" name="question18" value="d">(d)He is the only president to have been impeached twice</p>
+    </div>
+    <div id="president19">
+        <p>Rutherford Hayes</p>
+        <p><input type="radio" name="question19" value="a">(a)He was the first president to ever ride in an automobile</p>
+        <p><input type="radio" name="question19" value="b">(b)He and his wife started the tradition of having Easter Egg rolls on the Whitehouse lawn </p>
+        <p><input type="radio" name="question19" value="c">(c)Was known for being a man of very few words </p>
+        <p><input type="radio" name="question19" value="d">(d)He was blinded in one eye while boxing in the Whitehouse</p>
+    </div>
+    <div id="president20">
+        <p>James Garfield</p>
+        <p><input type="radio" name="question20" value="a">(a)Married one of his students while he was teaching classes at a college</p>
+        <p><input type="radio" name="question20" value="b">(b)Was afraid to touch lightbulbs out of fear of electrocution </p>
+        <p><input type="radio" name="question20" value="c">(c)Jellybeans were his favorite snack </p>
+        <p><input type="radio" name="question20" value="d">(d)Was a very accomplished wrestler and only ever lost one out of three hundred matches</p>
+    </div>
+    <div id="president21">
+        <p>Chester Arthur</p>
+        <p><input type="radio" name="question21" value="a">(a)Was the first president to ever be impeached</p>
+        <p><input type="radio" name="question21" value="b">(b)Despite serving for thirty five years in the army and becoming a general, he never once saw active combat </p>
+        <p><input type="radio" name="question21" value="c">(c)Was known for being a man of very few words </p>
+        <p><input type="radio" name="question21" value="d">(d)He was a very skilled fisherman</p>
+    </div>
+    <div id="president22">
+        <p>Grover Cleveland</p>
+        <p><input type="radio" name="question22" value="a">(a)He is the only president who has never been married</p>
+        <p><input type="radio" name="question22" value="b">(b)Was the fattest president and once got stuck in the Whitehouse bathtub </p>
+        <p><input type="radio" name="question22" value="c">(c)Is the only US president to have served two non consectutive terms</p>
+        <p><input type="radio" name="question22" value="d">(d)He was the first president to ever ride in an automobile </p>
+    </div>
+    <div id="president23">
+        <p>Benjamin Harrison</p>
+        <p><input type="radio" name="question23" value="a">(a)Married one of his students while he was teaching classes at a college</p>
+        <p><input type="radio" name="question23" value="b">(b)Was afraid to touch lightbulbs out of fear of electrocution </p>
+        <p><input type="radio" name="question23" value="c">(c)His middlename was Milhous</p>
+        <p><input type="radio" name="question23" value="d">(d)Was the fattest president and once got stuck in the Whitehouse bathtub </p>
+    </div>
+    <div id="president24">
+        <p>William McKinley</p>
+        <p><input type="radio" name="question24" value="a">(a)He was the first president to ever ride in an automobile</p>
+        <p><input type="radio" name="question24" value="b">(b)Is the only US president to have served two non consectutive terms </p>
+        <p><input type="radio" name="question24" value="c">(c)His first job was at baskin robbins scooping icrecream </p>
+        <p><input type="radio" name="question24" value="d">(d)Was a very accomplished wrestler and only ever lost one out of three hundred matches</p>
+    </div>
+    <div id="president25">
+        <p>Theodore Roosevelt</p>
+        <p><input type="radio" name="question25" value="a">(a)Was the first president from the South since the Civil War</p>
+        <p><input type="radio" name="question25" value="b">(b)He was blinded in one eye while boxing in the Whitehouse </p>
+        <p><input type="radio" name="question25" value="c">(c)Was the first catholic president </p>
+        <p><input type="radio" name="question25" value="d">(d)He was the first person in his family to graduate highschool</p>
+    </div>
+    <div id="president26">
+        <p>William Taft</p>
+        <p><input type="radio" name="question26" value="a">(a)When he was twelve his father made him walk for miles in a thunderstorm</p>
+        <p><input type="radio" name="question26" value="b">(b)He was a very skilled fisherman </p>
+        <p><input type="radio" name="question26" value="c">(c)Was the fattest president and once got stuck in the Whitehouse bathtub </p>
+        <p><input type="radio" name="question26" value="d">(d)He has won two grammy awards</p>
+    </div>
+    <div id="president27">
+        <p>Woodrow Wilson</p>
+        <p><input type="radio" name="question27" value="a">(a)He served as president and vice president despite never being elected to office</p>
+        <p><input type="radio" name="question27" value="b">(b)Was the first president from the South since the Civil War </p>
+        <p><input type="radio" name="question27" value="c">(c)His middlename was Milhous </p>
+        <p><input type="radio" name="question27" value="d">(d)Was afraid to touch lightbulbs out of fear of electrocution</p>
+    </div>
+    <div id="president28">
+        <p>Warren Harding</p>
+        <p><input type="radio" name="question28" value="a">(a)Was a keen stamp collector</p>
+        <p><input type="radio" name="question28" value="b">(b)Is the only US president to have served two non consectutive terms </p>
+        <p><input type="radio" name="question28" value="c">(c)He is the only president with an MBA</p>
+        <p><input type="radio" name="question28" value="d">(d)Ordered desegregation of the Whitehouse and the District of Columbia</p>
+    </div>
+    <div id="president29">
+        <p>Calvin Coolidge</p>
+        <p><input type="radio" name="question29" value="a">(a)He is the only president who has never been married</p>
+        <p><input type="radio" name="question29" value="b">(b)His first job was at baskin robbins scooping icrecream </p>
+        <p><input type="radio" name="question29" value="c">(c)Was known for being a man of very few words</p>
+        <p><input type="radio" name="question29" value="d">(d)When he was twelve his father made him walk for miles in a thunderstorm </p>
+    </div>
+    <div id="president30">
+        <p>Herbert Hoover</p>
+        <p><input type="radio" name="question30" value="a">(a)Was a self made millionaire from discovering valuable metals all over the globe</p>
+        <p><input type="radio" name="question30" value="b">(b)He was a very skilled fisherman </p>
+        <p><input type="radio" name="question30" value="c">(c)Married one of his students while he was teaching classes at a college </p>
+        <p><input type="radio" name="question30" value="d">(d)Was afraid to touch lightbulbs out of fear of electrocution</p>
+    </div>
+    <div id="president31">
+        <p>Franklin Roosevelt</p>
+        <p><input type="radio" name="question31" value="a">(a)Was the first catholic president</p>
+        <p><input type="radio" name="question31" value="b">(b)Was a keen stamp collector </p>
+        <p><input type="radio" name="question31" value="c">(c)He is the only president who has never been married</p>
+        <p><input type="radio" name="question31" value="d">(d)He was the youngest pilot in the navy while he served</p>
+    </div>
+    <div id="president32">
+        <p>Harry Truman</p>
+        <p><input type="radio" name="question32" value="a">(a)He did not find out about the nations atomic program until after FDR died and he was sworn in as president</p>
+        <p><input type="radio" name="question32" value="b">(b)He and his wife started the tradition of having Easter Egg rolls on the Whitehouse lawn\n</p>
+        <p><input type="radio" name="question32" value="c">(c)Was known for being a man of very few words </p>
+        <p><input type="radio" name="question32" value="d">(d)Was a very accomplished wrestler and only ever lost one out of three hundred matches</p>
+    </div>
+    <div id="president33">
+        <p>Dwight Eisenhower</p>
+        <p><input type="radio" name="question33" value="a">(a)He is the oldest president in us history</p>
+        <p><input type="radio" name="question33" value="b">(b)Is the only US president to have served two non consectutive terms </p>
+        <p><input type="radio" name="question33" value="c">(c)Despite serving for thirty five years in the army and becoming a general, he never once saw active combat </p>
+        <p><input type="radio" name="question33" value="d">(d)When he was twelve his father made him walk for miles in a thunderstorm</p>
+    </div>
+    <div id="president34">
+        <p>John Kennedy</p>
+        <p><input type="radio" name="question34" value="a">(a)Ordered desegregation of the Whitehouse and the District of Columbia</p>
+        <p><input type="radio" name="question34" value="b">(b)He was a very skilled fisherman </p>
+        <p><input type="radio" name="question34" value="c">(c)Jellybeans were his favorite snack</p>
+        <p><input type="radio" name="question34" value="d">(d)Was the first catholic president</p>
+    </div>
+    <div id="president35">
+        <p>Lyndon Johnson</p>
+        <p><input type="radio" name="question35" value="a">(a)He is the only president with an MBA</p>
+        <p><input type="radio" name="question35" value="b">(b)His first career was that of a teacher </p>
+        <p><input type="radio" name="question35" value="c">(c)Was afraid to touch lightbulbs out of fear of electrocution </p>
+        <p><input type="radio" name="question35" value="d">(d)His first job was at baskin robbins scooping icrecream</p>
+    </div>
+    <div id="president36">
+        <p>Richard Nixon</p>
+        <p><input type="radio" name="question36" value="a">(a)His middlename was Milhous</p>
+        <p><input type="radio" name="question36" value="b">(b)He is the only president who has never been married</p>
+        <p><input type="radio" name="question36" value="c">(c)He has won two grammy awards </p>
+        <p><input type="radio" name="question36" value="d">(d)Was the fattest president and once got stuck in the Whitehouse bathtub </p>
+    </div>
+    <div id="president37">
+        <p>Gerald Ford</p>
+        <p><input type="radio" name="question37" value="a">(a)When he was twelve his father made him walk for miles in a thunderstorm</p>
+        <p><input type="radio" name="question37" value="b">(b)He was a very skilled fisherman</p>
+        <p><input type="radio" name="question37" value="c">(c)He served as president and vice president despite never being elected to office </p>
+        <p><input type="radio" name="question37" value="d">(d)Was a keen stamp collector</p>
+    </div>
+    <div id="president38">
+        <p>Jimmy Carter</p>
+        <p><input type="radio" name="question38" value="a">(a)He is the only president with an MBA</p>
+        <p><input type="radio" name="question38" value="b">(b)He was the first person in his family to graduate highschool </p>
+        <p><input type="radio" name="question38" value="c">(c)Is the only US president to have served two non consectutive terms </p>
+        <p><input type="radio" name="question38" value="d">(d)He was blinded in one eye while boxing in the Whitehouse</p>
+    </div>
+    <div id="president39">
+        <p>Ronald Reagan</p>
+        <p><input type="radio" name="question39" value="a">(a)Married one of his students while he was teaching classes at a college</p>
+        <p><input type="radio" name="question39" value="b">(b)His first job was at baskin robbins scooping icrecream </p>
+        <p><input type="radio" name="question39" value="c">(c)He loved to listen to Mocking Birds sing and he kept them as pets</p>
+        <p><input type="radio" name="question39" value="d">(d)Jellybeans were his favorite snack</p>
+    </div>
+    <div id="president40">
+        <p>George HW Bush</p>
+        <p><input type="radio" name="question40" value="a">(a)He was the youngest pilot in the navy while he served</p>
+        <p><input type="radio" name="question40" value="b">(b)Was the first president from the South since the Civil War </p>
+        <p><input type="radio" name="question40" value="c">(c)He had fifteen children the most of any presiden </p>
+        <p><input type="radio" name="question40" value="d">(d)He has won two grammy awards</p>
+    </div>
+    <div id="president41">
+        <p>Bill Clinton</p>
+        <p><input type="radio" name="question41" value="a">(a)He was unaware that he was nominated as presential candidate until he recieved a letter telling him so</p>
+        <p><input type="radio" name="question41" value="b">(b)He has won two grammy awards </p>
+        <p><input type="radio" name="question41" value="c">(c)He is the only president to have been impeached twice </p>
+        <p><input type="radio" name="question41" value="d">(d)He is the only president with an MBA</p>
+    </div>
+    <div id="president42">
+        <p>George W Bush</p>
+        <p><input type="radio" name="question42" value="a">(a)Married one of his students while he was teaching classes at a college</p>
+        <p><input type="radio" name="question42" value="b">(b)Was a keen stamp collector</p>
+        <p><input type="radio" name="question42" value="c">(c)He is the only president with an MBA </p>
+        <p><input type="radio" name="question42" value="d">(d)He was a very skilled fisherman</p>
+    </div>
+    <div id="president43">
+        <p>Barrack Obama</p>
+        <p><input type="radio" name="question43" value="a">(a)While studying at Princeton he stayed for an extra year which makes him the very first postgraduate student in the US</p>
+        <p><input type="radio" name="question43" value="b">(b)His first job was at baskin robbins scooping icrecream </p>
+        <p><input type="radio" name="question43" value="c">(c)Jellybeans were his favorite snack </p>
+        <p><input type="radio" name="question43" value="d">(d)Was the first catholic president</p>
+    </div>
+    <div id="president44">
+        <p>Donald Trump</p>
+        <p><input type="radio" name="question44" value="a">(a)He is the only president to have been impeached twice</p>
+        <p><input type="radio" name="question44" value="b">(b)He is the oldest president in us history </p>
+        <p><input type="radio" name="question44" value="c">(c)Was afraid to touch lightbulbs out of fear of electrocution </p>
+        <p><input type="radio" name="question44" value="d">(d)Was the fattest president and once got stuck in the Whitehouse bathtub</p>
+    </div>
+    <div id="president45">
+        <p>Joe Biden</p>
+        <p><input type="radio" name="question45" value="a">(a)His first career was that of a teacher</p>
+        <p><input type="radio" name="question45" value="b">(b)His first job was at baskin robbins scooping icrecream </p>
+        <p><input type="radio" name="question45" value="c">(c)He is the oldest president in us history </p>
+        <p><input type="radio" name="question45" value="d">(d)Was a keen stamp collector</p>
+    </div>
+    <div>
+        <p>president <text id="name001"></text></p>
+    </div>
+    <input type="button" name="" value="I'm done" onclick="check()">
+</div> -->
 </div>
     <script src="src/data.js"></script>
     <script src="src/index.js"></script>
+    </body>
+    </html>

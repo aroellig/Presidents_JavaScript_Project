@@ -63,7 +63,7 @@ body {
 
 .quiz-box .question-number{
   font-size: 50px;
-  
+
 }
 
 .quiz-box .image{
@@ -101,6 +101,39 @@ body {
   border-radius: 10px;
   line-height: 22px;
   margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-box .president-facts .fact.correct::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+
+}
+
+.quiz-box .president-facts .fact.wrong::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+
+}
+
+.quiz-box .president-facts .fact.already-clicked{
+pointer-events: none;
+
+}
+
+.quiz-box .correct-fact div.correct{
+  
 }
 
 .result{
@@ -140,5 +173,9 @@ width: 100%;
 }
 
 .result.hide{
+  display: none;
+}
+
+.presidents.hide{
   display: none;
 }
