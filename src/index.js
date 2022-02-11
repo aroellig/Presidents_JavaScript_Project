@@ -146,11 +146,11 @@ function unclickable(){
 }
 
 function next(){
-    if (numTrys === 2){
+    debugger
+    if (numTrys === 3){
      
         finish()
     } else {
-       
         quiz.classList.add('hide')
         presidentsList.classList.remove('hide')
         const eachPrez = Array.from(eachPres)
@@ -166,13 +166,12 @@ function next(){
 
 function hidePres(pres){
     const eachPrez = Array.from(eachPres)
-    // debugger
+    debugger
     for(let i = 0; i < eachPrez.length; i++){
-        // debugger
+        debugger
         if(currentPresident.name === eachPrez[i].innerText){
             eachPrez[i].classList.add("hide")
             console.log(eachPrez[i].classList)
-            
         } 
     }
 }
@@ -209,7 +208,6 @@ function finalScore(){
 
 function tryAgain(){
     result.classList.add('hide')
-    quiz.classList.remove('hide')
     reset()
     start()
 }
@@ -223,7 +221,7 @@ function reset(){
 
    function start() {
     intro.classList.add('hide')
-    quiz.classList.remove('hide')
+    quiz.classList.add('hide')
     presidentsList.classList.remove('hide')
      setAvailablePresidents();
     //  getNewPresident();
