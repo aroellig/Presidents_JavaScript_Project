@@ -20,13 +20,7 @@ let points = 0;
 let numTrys = 0;
 
 
-function setAvailablePresidents(){
-    for(let i = 0; i < presidents.length; i++){
-        availablePresidents.push(presidents[i])
-        // createPresident(presidents[i])   
-    }
-    
-}
+
 
 function createPresident(num){
     const id = num
@@ -70,43 +64,6 @@ function createPresident(num){
     presidentsList.classList.add('hide')
     quiz.classList.remove('hide')
 }
-
-// function getNewPresident(){
-//     questionNumber.innerHTML = numPresidents + 1;
-//     const presidentsIndex = availablePresidents[Math.floor(Math.random() * availablePresidents.length)]
-//     currentPresident = presidentsIndex;
-//     presidentName.innerHTML = currentPresident.name;
-//     const index1 = availablePresidents.indexOf(presidentsIndex);
-//     availablePresidents.splice(index1, 1);
-//     image.innerHTML = ''
-//     if (currentPresident.hasOwnProperty("img")){
-//         const img = document.createElement("img")
-//         img.src = currentPresident.img
-//         image.appendChild(img)
-//     }
-
-//     const factsLength = currentPresident.facts.length;
-//     for(let i = 0; i < factsLength; i++){
-//         availableFacts.push[i]
-//     }
-
-//     presidentFacts.innerHTML = ''
-//    for(let i = 0; i< factsLength; i++){
-
-//        const factIndex = availableFacts[Math.floor(Math.random() * availableFacts.length)];
-
-//        const index2 = availableFacts.indexOf(factIndex);
-//        availableFacts.splice(index2, 1)
-//        const fact = document.createElement('div');
-//        fact.innerHTML = currentPresident.facts[i];
-//        fact.id = i;
-//        fact.className = "fact";
-//        presidentFacts.appendChild(fact);
-//        fact.setAttribute('onclick', 'getResult(this)')
-//    }
-//     numPresidents ++ 
-   
-// }
 
 function getResult(factElement){
 const id = parseInt(factElement.id);
@@ -228,9 +185,7 @@ function reset(){
     intro.classList.add('hide')
     quiz.classList.add('hide')
     presidentsList.classList.remove('hide')
-     setAvailablePresidents();
-    //  getNewPresident();
+
     correctAnswer();
-//    addPresident();
-//    createPresident();
+
  }
