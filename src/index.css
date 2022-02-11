@@ -189,7 +189,22 @@ width: 100%;
   width: 50%;
 } */
 .presidents-list{
-  overflow: visible;
+  max-width: 700px;
+  margin: 150px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+
+.presidents-list td{
+  margin: 30px 0;
+  padding: 8px 15px;
+}
+
+.presidents-list table{
+  width: 100%;
+  background-color: white;
 }
 
 .president.hide{
