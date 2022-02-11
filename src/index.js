@@ -146,17 +146,20 @@ function unclickable(){
 }
 
 function next(){
-    debugger
+   
     if (numTrys === 3){
      
         finish()
     } else {
+        
         quiz.classList.add('hide')
         presidentsList.classList.remove('hide')
         const eachPrez = Array.from(eachPres)
         totalPres = presidents.length
         for(var i = 0; i < totalPres; i++){
-            if (currentPresident === presidents[i].name){
+           
+            if (currentPresident.name === presidents[i].name){
+                
                 currentPresident = presidents[i]
                 hidePres(currentPresident)
             }
@@ -166,10 +169,8 @@ function next(){
 
 function hidePres(pres){
     const eachPrez = Array.from(eachPres)
-    debugger
     for(let i = 0; i < eachPrez.length; i++){
-        debugger
-        if(currentPresident.name === eachPrez[i].innerText){
+        if(pres.name === eachPrez[i].innerText){
             eachPrez[i].classList.add("hide")
             console.log(eachPrez[i].classList)
         } 
@@ -216,6 +217,10 @@ function reset(){
  numPresidents = 0;
  points = 0;
  numTrys = 0;
+ const eachPrez = Array.from(eachPres);
+ for(let i = 0; i < eachPrez.length; i++){
+    eachPrez[i].classList.remove("hide")
+ }
 }
 
 
