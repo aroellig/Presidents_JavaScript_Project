@@ -10,6 +10,7 @@ const intro = document.querySelector(".intro")
 const scores = document.querySelector(".score")
 const presidentsList = document.querySelector(".presidents-list")
 const presName= document.querySelectorAll(".pres-name")
+const eachPres = document.querySelectorAll(".president")
 let numPresidents = 0;
 let currentPresident;
 let prez;
@@ -149,10 +150,33 @@ function next(){
      
         finish()
     } else {
+       
         quiz.classList.add('hide')
         presidentsList.classList.remove('hide')
+        const eachPrez = Array.from(eachPres)
+        totalPres = presidents.length
+        for(var i = 0; i < totalPres; i++){
+            if (currentPresident === presidents[i].name){
+                currentPresident = presidents[i]
+                hidePres(currentPresident)
+            }
+        }
     }
 }
+
+function hidePres(pres){
+    const eachPrez = Array.from(eachPres)
+    // debugger
+    for(let i = 0; i < eachPrez.length; i++){
+        // debugger
+        if(currentPresident.name === eachPrez[i].innerText){
+            eachPrez[i].classList.add("hide")
+            console.log(eachPrez[i].classList)
+            
+        } 
+    }
+}
+
 
 function correctAnswer(){
      correctFact.innerHTML = ''
