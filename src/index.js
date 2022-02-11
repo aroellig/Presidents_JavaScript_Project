@@ -52,7 +52,7 @@ function createPresident(num){
             }
         
             presidentFacts.innerHTML = ''
-           for(let j = 0; j< factsLength; j++){
+           for(let i = 0; i< factsLength; i++){
         
                const factIndex = availableFacts[Math.floor(Math.random() * availableFacts.length)];
         
@@ -60,7 +60,7 @@ function createPresident(num){
                availableFacts.splice(index2, 1)
                const fact = document.createElement('div');
                fact.innerHTML = prez.facts[i];
-               fact.id = j;
+               fact.id = i;
                fact.className = "fact";
                presidentFacts.appendChild(fact);
                fact.setAttribute('onclick', 'getResult(this)')
@@ -68,6 +68,7 @@ function createPresident(num){
             numPresidents ++ 
         } 
     }
+    presidentsList.classList.add('hide')
 }
 
 function getNewPresident(){
