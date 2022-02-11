@@ -187,3 +187,7 @@ width: 100%;
 .presidents-list{
   overflow: visible;
 }
+
+.president.hide{
+  display: none;
+}
