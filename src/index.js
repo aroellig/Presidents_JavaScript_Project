@@ -67,6 +67,7 @@ function createPresident(num){
         } 
     }
     presidentsList.classList.add('hide')
+    quiz.classList.remove('hide')
 }
 
 // function getNewPresident(){
@@ -114,12 +115,12 @@ for(var i = 0; i < totalPres; i++){
         currentPresident = presidents[i]
     }
 }
-debugger
+
 if(id === currentPresident.answer){
     factElement.classList.add('correct')
     updateFact('correct')
     points ++
-   
+   console.log(points)
 }else{
     factElement.classList.add('wrong')
     factLength = presidentFacts.children.length
@@ -144,11 +145,12 @@ function unclickable(){
 }
 
 function next(){
-    if (numPresidents === 2){
+    if (numTrys === 2){
      
         finish()
     } else {
-        getNewPresident();
+        quiz.classList.add('hide')
+        presidentsList.classList.remove('hide')
     }
 }
 
