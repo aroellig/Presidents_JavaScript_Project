@@ -103,6 +103,7 @@ body {
   margin-bottom: 10px;
   position: relative;
   overflow: hidden;
+  
 }
 
 .quiz-box .president-facts .fact.correct::before{
@@ -112,8 +113,12 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: red;
+  background-color: blue;
 
+}
+
+.quiz-box .president-facts {
+  z-index: 1;
 }
 
 .quiz-box .president-facts .fact.wrong::before{
@@ -123,7 +128,7 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: green;
+  background-color: red;
 
 }
 
