@@ -11,6 +11,9 @@ const scores = document.querySelector(".score")
 const presidentsList = document.querySelector(".presidents-list")
 const presName= document.querySelectorAll(".pres-name")
 const eachPres = document.querySelectorAll(".president")
+const progressBtn = document.querySelector(".progress-btn")
+const tryAgainBtn = document.querySelector(".try-again-btn")
+const returnBtn = document.querySelector(".return-btn")
 let numPresidents = 0;
 let currentPresident;
 let prez;
@@ -124,6 +127,19 @@ function next(){
     }
 }
 
+function progress(){
+    quiz.classList.add('hide')
+    progressBtn.classList.add('hide')
+    result.classList.remove('hide')
+    presidentsList.classList.add('hide')
+    tryAgainBtn.classList.add('hide')
+    returnBtn.classList.remove('hide')
+    result.querySelector(".total-presidents").innerHTML = numTrys;
+    result.querySelector(".total-correct").innerHTML = points;
+    result.querySelector(".percent").innerHTML = ((points/numTrys) * 100).toFixed() + "%"
+    result.querySelector(".total-score").innerHTML= points +" / " + numTrys
+}
+
 function hidePres(pres){
     const eachPrez = Array.from(eachPres)
     for(let i = 0; i < eachPrez.length; i++){
@@ -153,6 +169,9 @@ function updateFact(mark){
 function finish(){
     quiz.classList.add('hide')
     result.classList.remove('hide')
+    progressBtn.classList.add('hide')
+    tryAgainBtn.classList.remove('hide')
+    returnBtn.classList.add('hide')
    finalScore()
   
 }
@@ -180,11 +199,19 @@ function reset(){
  }
 }
 
+function goBack(){
+    intro.classList.add('hide')
+    quiz.classList.add('hide')
+    presidentsList.classList.remove('hide')
+    progressBtn.classList.remove('hide')
+    result.classList.add('hide')
+}
 
    function start() {
     intro.classList.add('hide')
     quiz.classList.add('hide')
     presidentsList.classList.remove('hide')
+    progressBtn.classList.remove('hide')
 
     correctAnswer();
 

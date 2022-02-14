@@ -10,7 +10,10 @@
 <body>
     <div class ="intro ">
         <h1>Presidents Trivia</h1>
-        <p>Test your knowledge of US presidents. You must choose the correct fact for each US president</p>
+        <p>Test your knowledge of US presidents. Once you click begin you will be presented with an image of each US president. When you click on an image you will be presented with four facts.
+            You will have one chance to choose the correct fact. You may use the score button at the top of the page to see how many correct facts you have chosen and once you have selected each president
+            you will receive a final score
+        </p>
         <button type="button" class="start-btn" onclick="start()">Begin</button>
      
     </div>
@@ -51,6 +54,10 @@
             </tr>
         </table>
         <button type="button" class="try-again-btn" onclick="tryAgain()">Try Again</button>
+        <button type="button" class="return-btn" onclick="goBack()">Back to Main</button>
+    </div>
+    <div>
+        <button type="button" class="progress-btn hide" onclick="progress()">Your results so far</button>
     </div>
     <div class="presidents-list hide">
         <table>
