@@ -222,7 +222,7 @@ width: 100%;
 
 .president.hide{
   filter: blur(8px);
-  -webkit-filter: blur(16px);
+  /* -webkit-filter: blur(16px); */
   color: black;
 }
 
