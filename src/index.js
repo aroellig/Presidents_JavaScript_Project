@@ -26,6 +26,7 @@ let numTrys = 0;
 
 
 function createPresident(num){
+    progressBtn.classList.add('hide')
     const id = num
     const presNames = Array.from(presName)
     currentPresident = presNames[id]
@@ -106,7 +107,7 @@ function unclickable(){
 }
 
 function next(){
-   
+    progressBtn.classList.remove('hide')
     if (numTrys === 3){
      
         finish()
