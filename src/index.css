@@ -22,7 +22,7 @@ body {
 }
 .intro{
   height: 100%;
-  max-width: 700px;
+  width: 50%;
   margin: 50px auto;
   padding: 30px;
   border-radius: 10px;
@@ -53,7 +53,7 @@ body {
 
 .quiz-box{
 
-  max-width: 700px;
+  width: 50%;
   margin: 150px auto;
   padding: 30px;
   border-radius: 10px;
@@ -147,7 +147,7 @@ pointer-events: none;
 
 .result{
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.EAxH-_zrnO0cWryay1db9wHaEc%26pid%3DApi&f=1);
-  max-width: 700px;
+  width: 50%;
   margin: 150px auto;
   padding: 30px;
   border-radius: 10px;
@@ -202,7 +202,7 @@ width: 100%;
   width: 50%;
 } */
 .presidents-list{
-  max-width: 700px;
+ width: 50%;
   margin: 150px;
   padding: 30px;
   border-radius: 10px;
