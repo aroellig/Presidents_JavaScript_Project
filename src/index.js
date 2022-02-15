@@ -107,7 +107,7 @@ function unclickable(){
 }
 
 function next(){
-    progressBtn.classList.remove('hide')
+    progressBtn.classList.add('hide')
     if (numTrys === 3){
      
         finish()
